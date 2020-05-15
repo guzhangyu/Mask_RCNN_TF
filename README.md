@@ -1,0 +1,5 @@
+# Mask_RCNN_TF
+将Mask_RCNN的keras迁移为tensorflow.keras
+因为想要将Mask_RCNN模型做成可以在手机上运行的tflite形式，已经将keras相关的调用改成tensorflow.keras形式，以方便导出可以支持导成tflite格式的pd文件。
+
+但是目前在进行model.fit这一步时出现“ValueError: No gradients provided for any variable”的错误，通过调试可以看到一些变量对应的梯度为None。
